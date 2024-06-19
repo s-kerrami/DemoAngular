@@ -1,0 +1,49 @@
+<h1>Demonstrations Pipes</h1>
+
+<div>
+    <h2>Pipes integres</h2>
+    <!-- Pipe upercase -->
+     <p>Texte original :{{texte}}</p>
+     <p>Texte en Majuscules :{{texte | uppercase}}</p>
+</div>
+<div>
+    <!-- Pipes LowerCase -->
+    <p>Texte en miniscules {{texte | lowercase}}</p>
+
+    <!-- Pipes dates  -->
+    <p>Date actuelle (fullDate) : {{dateActuelle | date:'fullDate'}}</p>
+    <p>Date actuelle (shorDate) : {{dateActuelle | date:'shorteDate'}}</p>
+    <p>Date actuelle (midiumDate) : {{dateActuelle | date:'dmidiumDate'}}</p>
+    <p>Date actuelle (longDate) : {{dateActuelle | date:'longDate'}}</p>
+
+
+
+    <!-- pip Currency -->
+     <p>Montant : {{montant | currency:'EUR'}}</p>
+     <p>Montant : {{montant | currency:'USD'}}</p>
+     <p>Montant : {{montant | currency:'GBP'}}</p>
+
+
+     <!-- pip pourcentage  -->
+      <p>Pourcentage : {{pourcentage | percent}}</p>
+
+
+      <!-- pip number  -->
+       <p>Nombre formaté : {{nombre | number}}</p>
+       <p>Nombre formaté (1.2-3): {{nombre | number:'1.2-3'}}</p>
+
+
+       <!-- pip Json -->
+        <p> Objet Json : {{objet | json}}</p>
+
+        <!-- pip slice -->
+         <p>Tableau original : {{tableau}}</p>
+         <p>Slice (2 à 5) : {{tableau | slice:2:5}}</p>
+         <p>Slice (dernier element) : {{tableau | slice:-1}}</p>
+</div>
+
+<div>
+    <h2>Pipes Custom</h2>
+    <p> chaineoriginale : 'Angular'</p>
+    <p> Chaine formatée : {{texte | formatter:'Hello':'!!!'}}</p>
+</div>
