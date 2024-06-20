@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './shared/home/home.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { BindingComponent } from './components/demos/binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipeComponent } from './components/demos/pipe/pipe.component';
-import { FormatterPipe } from './pipes/formatter.pipe';
-import { ReductionPipe } from './pipes/reduction.pipe';
+import { FormatterPipe } from './tools/pipes/formatter.pipe';
+import { ReductionPipe } from './tools/pipes/reduction.pipe';
 import { ChronometreComponent } from './components/exos/chronometre/chronometre.component';
 import { DirectivesComponent } from './components/demos/directives/directives.component';
-import { SurbrillanceDirective } from './directives/surbrillance.directive';
+import { SurbrillanceDirective } from './tools/directives/surbrillance.directive';
 import { ListeProduitsComponent } from './components/exos/list-produits/list-produits.component';
 import { ParentComponent } from './components/demos/inputOutput/parent/parent.component';
 import { EnfantComponent } from './components/demos/inputOutput/enfant/enfant.component';
 import { AffichageListeComponent } from './components/exos/shoppingList/affichage-liste/affichage-liste.component';
 import { AjoutArticleComponent } from './components/exos/shoppingList/ajout-article/ajout-article.component';
 import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopping.component';
+import { LivreServiceComponent } from './components/demos/livre-service/livre-service.component';
+import { ShoppingListServiceComponent } from './components/exos/shopping-list-service/shopping-list-service.component';
+import { FormulaireComponent } from './components/demos/formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +41,16 @@ import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopp
     AffichageListeComponent,
     AjoutArticleComponent,
     ShoppingComponent,
+    LivreServiceComponent,
+    ShoppingListServiceComponent,
+    FormulaireComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

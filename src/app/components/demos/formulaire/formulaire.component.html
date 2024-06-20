@@ -1,0 +1,32 @@
+
+<fieldset>
+    <legend>Formulaire</legend><br><br>
+    <form [formGroup]="formulaire" (ngSubmit)="onSubmit()">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" formControlName="nom">
+        <br><br>
+        <label for="age">Age :</label>
+        <input type="number" id="age" formControlName="age">
+        <br><br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" formControlName="email">
+        <br><br>
+        <label for="genre">Genre :</label>
+        <select id="genre" formControlName="genre">
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+        </select>
+        <br><br>
+        <label for="hobbies">Hobbies :</label>
+        <input type="text" id="hobbies" formControlName="hobbies">
+        <br><br>
+        <label for="pays">Pays :</label>
+        <select id="pays" formControlName="pays">
+            <option value="france">France</option>
+            <option value="allemagne">Allemagne</option>
+            <option value="maroc">Maroc</option>
+        </select>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</fieldset>
